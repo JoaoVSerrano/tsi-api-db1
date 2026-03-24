@@ -97,4 +97,28 @@ router.delete("/:id", (req: Request, res: Response) => {
         });
     });
 });
+
+router.get("/:id", (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+
+    db.get(
+        "SELECT * FROM generos WHERE id = ?",
+        [id],
+        (erro, linha) => {
+            if (erro) {
+                return res.status(500).json(
+                    {erro: "Erro ao buscar gênero"}
+                );
+            }
+
+            if (!linha) {
+                return res.status(404).json(
+                    {erro: "Gênero não encontrado"}
+                );
+            }
+
+            res.json(linha);
+        }
+    )
+})
 export default router;

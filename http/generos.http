@@ -2,6 +2,8 @@
 
 GET {{url}}
 ###
+GET {{url}}/2
+###
 POST {{url}}
 Content-Type: application/json
 
