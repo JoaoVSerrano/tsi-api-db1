@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "ts-node src/server.ts",
+    "dev": "ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
@@ -27,6 +27,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
   }
 }
