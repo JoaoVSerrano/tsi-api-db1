@@ -6,6 +6,15 @@ POST {{url}}
 Content-Type: application/json
 
 {
+    "nome": "ação"
+}
+###
+PUT {{url}}/1
+Content-Type: application/json
+
+{
     "nome": "aventura"
 }
-
+###
+DELETE {{url}}/1
+Content-Type: application/json
